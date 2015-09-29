@@ -8,6 +8,7 @@ Thermostat.prototype.powerSavingOff = function() {
   };
 
 Thermostat.prototype.powerSavingOn = function() {
+    this.temperature = 25;
     this.powerSaving = true;
   };
 

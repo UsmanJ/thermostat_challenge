@@ -51,5 +51,12 @@ describe("Thermostat", function() {
     thermostat.temperature = 25
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
-  })
+  });
+
+  it("will return to 25 degrees if power saving is turned on", function() {
+    thermostat.powerSavingOff();
+    thermostat.temperature = 30
+    thermostat.powerSavingOn();
+    expect(thermostat.temperature).toEqual(25);  
+  });
 });
