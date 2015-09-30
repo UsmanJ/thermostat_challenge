@@ -32,3 +32,5 @@ Thermostat.prototype.downTemp = function() {
   };
   this.temperature--;
 };
+
+t = new Thermostat;
