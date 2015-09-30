@@ -26,12 +26,12 @@ describe("Thermostat", function() {
   });
 
   it("power saving to be on when initialized", function() {
-    expect(thermostat.powerSaving).toBe(true);
+    expect(thermostat.powerSavingOn).toBe(true);
   });
 
   it("power saving to be off when turned off", function() {
-    thermostat.powerSavingOff();
-    expect(thermostat.powerSaving).toBe(false);
+    thermostat.powerSavingToggle();
+    expect(thermostat.powerSavingOn).toBe(false);
   });
 
   it("when power saving is on, max temp is 25", function() {
@@ -41,7 +41,7 @@ describe("Thermostat", function() {
   });
 
   it("when power saving is off, max temp is 32", function() {
-    thermostat.powerSavingOff();
+    thermostat.powerSavingToggle();
     thermostat.temperature = 32
     expect(function() { thermostat.upTemp();
   }).toThrowError("Power saving 'off', can not go above 32 degrees");
@@ -54,9 +54,9 @@ describe("Thermostat", function() {
   });
 
   it("will return to 25 degrees if power saving is turned on", function() {
-    thermostat.powerSavingOff();
+    thermostat.powerSavingToggle();
     thermostat.temperature = 30
-    thermostat.powerSavingOn();
-    expect(thermostat.temperature).toEqual(25);  
+    thermostat.powerSavingToggle();
+    expect(thermostat.temperature).toEqual(25);
   });
 });
