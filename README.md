@@ -37,7 +37,7 @@ Clone the repository:
 
 $ git clone https://github.com/UsmanJ/thermostat_challenge.git
 ```
-```
+
 Change into the directory and run the tests in your browser:
 ```
 $ cd thermostat_challenge
