@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <link href="./public/layout.css" rel="stylesheet">
     <title>Thermostat Challenge</title>
   </head>
 
 	<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="jquery.js"></script>
     <script type="text/javascript" src="./src/Thermostat.js"></script>
     <script type="text/javascript" src="app.js"></script>
 
-    <!-- </script>
-    <div><span>20</span> Degrees</div>
-    <br> -->
-    <h1 id="temp_display"> ?? </h1>
-    <input type="button" id="btnUp" value="Up"/>
-    <input type="button" id="btnDown" value="Down"/>
+  <div class="container">
+    <div class="page-header">
+      <h1 id="temp_display"> ?? </h1>
+    </div>
+    <div>
+      <input class="btn btn-default" id="btnUp" type="button" value="Up">
+      <input class="btn btn-default" id="btnDown" type="button" value="Down">
+    </div>
     <br>
-    <input type="button" id="btnReset" value="Reset"/><br>
-    <input type="checkbox" id="cbxPowerSaving"/>Power Saving Mode
-
-
-    <!-- <button onclick="t.upTemp()">Up</button>
-    <button onclick="t.downTemp()">Down</button>
-    <button onclick="t.reset()">Reset</button>
-    <input type="checkbox" onclick="$(this.powerSaving).val(this.checked ? true : false)">Power Saving Mode -->
-
+    <!-- <input type="button" id="btnReset" value="Reset"/> -->
+    <button type="button" class="btn btn-danger" id="btnReset">Reset</button>
+    <div class="checkbox">
+      <input type="checkbox" id="cbxPowerSaving"/>Power Saving Mode
+    </div>
+  </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>
 </html>

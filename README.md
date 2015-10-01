@@ -5,7 +5,7 @@ Thermostat Challenge
 Synopsis:
 -------
 
-Thermostat challenge required us to create a system for a thermostat which can increase/decrease the temperature. A power saving feature was also implimented which had an influence on how high the temperature can go when turned on. I carried out test-driven development to ensure that there were no errors in the system. 
+Thermostat challenge required us to create a system for a thermostat which can increase/decrease the temperature. A power saving feature was also implimented which had an influence on how high the temperature can go when turned on. I carried out test-driven development to ensure that there were no errors in the system.
 
 Features:
 -------
@@ -26,6 +26,7 @@ Technologies Used
 ------
 
 * JavaScript
+* jQuery
 * Jasmine
 
 
