@@ -5,8 +5,6 @@ var thermostat = new Thermostat();
 $( document ).ready(function() {
   $("#temp_display").text(thermostat.temperature + " Degrees");
 
-  $( "#cbxPowerSaving" ).prop( "checked", true );
-
   $("#btnUp").click(function() {
       thermostat.upTemp();
       $("#temp_display").text(thermostat.temperature + " Degrees");
@@ -22,7 +20,7 @@ $( document ).ready(function() {
       $("#temp_display").text(thermostat.temperature + " Degrees");
   });
 
-  $("#cbxPowerSaving").click(function() {
+  $("#cbxPowerSaving").change(function() {
       thermostat.powerSavingToggle();
       $("#temp_display").text(thermostat.temperature + " Degrees");
   });

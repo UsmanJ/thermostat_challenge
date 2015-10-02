@@ -6,6 +6,8 @@
 		<script src="jquery.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>
 		<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
 		<script type="text/javascript" src="./src/Thermostat.js"></script>
 		<script type="text/javascript" src="app.js"></script>
@@ -13,48 +15,59 @@
 		<script type="text/javascript" src="./public/js/weather.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 		<title>Thermostat Challenge</title>
+		<style type="text/css">
+	  	body { background: url("./public/images/bg.jpg"); background-size: 100% 100%; !important; }
+		</style>
   </head>
 
-	<body>
+	<body background="http://iliketowastemytime.com/sites/default/files/new-york-skyline-night-wallpaper_1.jpg">
   <div class="container">
     <div class="page-header">
-      <h1 id="temp_display"> ?? </h1>
+      <h1 id="temp_display" style="color:white; display:inline"> ?? </h1>
+			<button type="button" class="btn btn-danger" id="btnReset" style="display:inline; float: right">Reset</button>
     </div>
+		<div>
     <div>
       <input class="btn btn-default" id="btnUp" type="button" value="Up">
       <input class="btn btn-default" id="btnDown" type="button" value="Down">
     </div>
     <br>
-    <button type="button" class="btn btn-danger" id="btnReset">Reset</button>
-    <div class="checkbox">
-      <input type="checkbox" id="cbxPowerSaving"/>Power Saving Mode
-    </div>
-		<div class="row">
-			<div class="col-lg-3">
-				<div class="input-group">
-					<input type="text" class="form-control" id="my-address" placeholder="Enter location...">
-					<span class="input-group-btn">
-						<button class="btn btn-default" id="getCords" onClick="codeAddress();">Go!</button>
-					</span>
+		<div class="checkbox">
+			<h4 style="color:white; float: left; margin-right: 0.5cm;">Power Saving Mode</h4>
+			<input type="checkbox" id="cbxPowerSaving" checked data-toggle="toggle" style="float: left">
+		</div>
+	</div>
+		<div class="col-md-offset-6 col-md-6" style="margin-top: -100px">
+			<div class="container2 clearfix">
+				<p class="location"></p>
+				<p class="temperature"></p>
+				<div class="climate_bg"></div>
+				<div class="info_bg">
+					<img class="dropicon" src="public/images/Droplet.svg">
+					<p class="humidity"></p>
+
+					<img class="windicon" src="public/images/Wind.svg">
+					<div class="windspeed"></div>
 				</div>
 			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6">
+					<div class="input-group">
+						<input type="text" class="form-control" id="my-address" placeholder="Enter location...">
+						<span class="input-group-btn">
+							<button class="btn btn-default" id="getCords" onClick="codeAddress();">Go!</button>
+						</span>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
   </div>
 
 	<br>
 
-	<div class="container2 clearfix">
-		<p class="location"></p>
-		<p class="temperature"></p>
-		<div class="climate_bg"></div>
-		<div class="info_bg">
-			<img class="dropicon" src="public/images/Droplet.svg">
-			<p class="humidity"></p>
-
-			<img class="windicon" src="public/images/Wind.svg">
-			<div class="windspeed"></div>
-		</div>
-	</div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	</body>
 </html>
