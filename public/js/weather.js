@@ -1,11 +1,9 @@
 if("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather(position.coords.latitude + ',' + position.coords.longitude);
-
   });
-} else {
-  loadWeather("Austin, TX", "");
-}
+};
+
 
 $ (document).ready(function() {
   setInterval(loadWeather, 10000);
@@ -34,3 +32,8 @@ function loadWeather(location, woeid) {
     }
   });
 }
+
+function codeAddress() {
+    var address = document.getElementById("my-address").value;
+    loadWeather(address, "");
+  }

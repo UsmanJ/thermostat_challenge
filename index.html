@@ -10,8 +10,9 @@
 		<script type="text/javascript" src="./src/Thermostat.js"></script>
 		<script type="text/javascript" src="app.js"></script>
 		<script type="text/javascript" src="jquery.simpleWeather.js"></script>
-		<script type="text/javascript" src="/public/js/weather.js"></script>
-    <title>Thermostat Challenge</title>
+		<script type="text/javascript" src="./public/js/weather.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+		<title>Thermostat Challenge</title>
   </head>
 
 	<body>
@@ -28,7 +29,18 @@
     <div class="checkbox">
       <input type="checkbox" id="cbxPowerSaving"/>Power Saving Mode
     </div>
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="input-group">
+					<input type="text" class="form-control" id="my-address" placeholder="Enter location...">
+					<span class="input-group-btn">
+						<button class="btn btn-default" id="getCords" onClick="codeAddress();">Go!</button>
+					</span>
+				</div>
+			</div>
+		</div>
   </div>
+
 	<br>
 
 	<div class="container2 clearfix">
